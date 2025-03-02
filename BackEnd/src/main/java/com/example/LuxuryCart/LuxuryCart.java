@@ -1,13 +1,13 @@
-package com.example.EcommerceWebsite;
+package com.example.LuxuryCart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcommerceWebsiteApplication {
+public class LuxuryCart{
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcommerceWebsiteApplication.class, args);
+		SpringApplication.run(LuxuryCart.class, args);
 	}
 
 }

@@ -1,7 +1,7 @@
-package com.example.EcommerceWebsite.controller;
+package com.example.LuxuryCart.controller;
 
-import com.example.EcommerceWebsite.model.Product;
-import com.example.EcommerceWebsite.service.ProductService;
+import com.example.LuxuryCart.model.Product;
+import com.example.LuxuryCart.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

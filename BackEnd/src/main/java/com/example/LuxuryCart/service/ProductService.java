@@ -1,7 +1,7 @@
-package com.example.EcommerceWebsite.service;
+package com.example.LuxuryCart.service;
 
-import com.example.EcommerceWebsite.model.Product;
-import com.example.EcommerceWebsite.repository.ProductRepository;
+import com.example.LuxuryCart.model.Product;
+import com.example.LuxuryCart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
