@@ -4,6 +4,7 @@ import axios from "axios";
 const AddProduct = () => {
   const [product, setProduct] = useState({
     name: "",
+    
     brand: "",
     description: "",
     price: "",

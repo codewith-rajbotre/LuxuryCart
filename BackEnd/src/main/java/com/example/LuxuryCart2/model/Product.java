@@ -1,4 +1,4 @@
-package com.example.LuxuryCart.model;
+package com.example.LuxuryCart2.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

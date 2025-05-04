@@ -1,7 +1,7 @@
-package com.example.LuxuryCart.service;
+package com.example.LuxuryCart2.service;
 
-import com.example.LuxuryCart.model.Product;
-import com.example.LuxuryCart.repository.ProductRepository;
+import com.example.LuxuryCart2.model.Product;
+import com.example.LuxuryCart2.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,7 +16,7 @@ public class ProductService {
     private ProductRepository repository;
 
     public List<Product> getAllProducts() {
-             return repository.findAll();
+        return repository.findAll();
     }
 
     public Product getProductById(int id) {
@@ -35,7 +35,7 @@ public class ProductService {
         product.setImageDate(imageFile.getBytes());
         product.setImageName(imageFile.getOriginalFilename());
         product.setImageType(imageFile.getContentType());
-          return repository.save(product);
+        return repository.save(product);
 
     }
 
@@ -44,6 +44,6 @@ public class ProductService {
     }
 
     public List<Product> searchProducts(String keyword) {
-         return repository.searchProduct(keyword);
+        return repository.searchProduct(keyword);
     }
 }

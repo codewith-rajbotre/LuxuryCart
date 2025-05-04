@@ -1,7 +1,7 @@
-package com.example.LuxuryCart.controller;
+package com.example.LuxuryCart2.controller;
 
-import com.example.LuxuryCart.model.Product;
-import com.example.LuxuryCart.service.ProductService;
+import com.example.LuxuryCart2.model.Product;
+import com.example.LuxuryCart2.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -29,21 +29,21 @@ public class ProductController {
     @GetMapping("/products")
     public ResponseEntity<List<Product> > getAllProducts(){
 
-             return new ResponseEntity<>(service.getAllProducts(), HttpStatus.OK );
+        return new ResponseEntity<>(service.getAllProducts(), HttpStatus.OK );
     }
 
     @GetMapping("/product/{id}")
     public ResponseEntity< Product> getProduct(@PathVariable int id){
 
-          Product product = service.getProductById(id);
-          if(product != null){
+        Product product = service.getProductById(id);
+        if(product != null){
 
 
-              return new ResponseEntity<>( product,  HttpStatus.OK );
-          }
+            return new ResponseEntity<>( product,  HttpStatus.OK );
+        }
         else{
-              return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-          }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
 
     }
     @PostMapping("/product")
@@ -58,12 +58,12 @@ public class ProductController {
     }
     @GetMapping("/product/{productId}/image")
     public ResponseEntity<byte[]> getImageByProductId(@PathVariable int productId){
-         Product product = service.getProductById(productId);
-         byte[] imageFile = product.getImageDate();
+        Product product = service.getProductById(productId);
+        byte[] imageFile = product.getImageDate();
 
-         return ResponseEntity.ok()
-                 .contentType(MediaType.valueOf(product.getImageType()))
-                 .body(imageFile);
+        return ResponseEntity.ok()
+                .contentType(MediaType.valueOf(product.getImageType()))
+                .body(imageFile);
     }
     @PutMapping("/product/{id}")
     public ResponseEntity<String> updateProduct(@PathVariable int id, @RequestPart Product product, @RequestPart MultipartFile imageFile){
@@ -74,11 +74,11 @@ public class ProductController {
             throw new RuntimeException(e);
         }
         if(product1 != null){
-                return new ResponseEntity<>("Product updated successfully", HttpStatus.OK);
-            }
-            else{
-                return new ResponseEntity<>( "failed to update",HttpStatus.BAD_REQUEST);
-            }
+            return new ResponseEntity<>("Product updated successfully", HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>( "failed to update",HttpStatus.BAD_REQUEST);
+        }
     }
     @DeleteMapping("/product/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable int id){
