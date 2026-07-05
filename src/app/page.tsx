@@ -1,7 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { fetchAllAdmins } from "@/db/supabase/login";
 
-export default function Home(): React.JSX.Element {
+export default async function Home() {
+  const data = await fetchAllAdmins();
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-background px-6">
       <Card className="w-full max-w-xl border-border shadow-2xl">
@@ -15,6 +18,7 @@ export default function Home(): React.JSX.Element {
           <p className="max-w-md text-muted-foreground italic">
             "Reserved for those who seek legacy over luxury."
           </p>
+
 
           <p className="text-sm text-muted-foreground">
             © 2026 Luxury Cart. All Rights Reserved.
