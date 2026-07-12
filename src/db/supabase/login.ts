@@ -1,15 +1,19 @@
 import { supabase } from "@/lib/supabase";
 
-export async function fetchAllAdmins() {
-    try {
-        const { data, error } = await supabase
-            .from("luxury_admin")
-            .select("*");
+export async function fetchAdminByEmail(email:string){
+    try{
+    const {data,error}=await supabase
+    .from("luxury_admin")
+    .select("*")
+    .eq("email",email)
+    .single();
 
-        if (error) {
-            console.error(error);
-        }
-
-    } catch (error) {
+    if(error){
+        return null;
     }
+    return data;
+}
+catch(error){
+    throw error;
+}
 }
