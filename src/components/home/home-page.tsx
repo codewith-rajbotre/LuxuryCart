@@ -1,45 +1,29 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
-export default function HomePage() {
-    const router = useRouter();
+import { Footer } from "../layout/layout/footer";
+import { Navbar } from "../navbar";
+import { HomepageCard } from "./homepage-card";
 
-    async function logout() {
-        const response = await fetch("/api/auth/logout", {
-            method: "POST",
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            router.replace("/login");
-        }
-    }
-
+export function HomePage() {
     return (
-        <main className="flex min-h-screen items-center justify-center bg-[#050505]">
-            <Card className="w-[500px] rounded-3xl border border-yellow-700/30 bg-black/70 p-10 backdrop-blur-xl">
-                <div className="space-y-5 text-center">
-                    <h1 className="text-5xl font-serif text-yellow-500">
-                        Luxury Cart
-                    </h1>
+        <main className="relative flex min-h-screen flex-col overflow-hidden bg-[#050505]">
 
-                    <p className="text-zinc-400">
-                        Welcome to the Luxury Cart Admin Dashboard
-                    </p>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.15),transparent_45%)]" />
 
-                    <Button
-                        onClick={logout}
-                        className="mt-6 h-12 w-full bg-yellow-600 text-black transition-all hover:bg-yellow-500"
-                    >
-                        Logout
-                    </Button>
-                </div>
-            </Card>
+            <div className="absolute left-1/2 top-40 h-125 w-125 -translate-x-1/2 rounded-full bg-yellow-700/10 blur-3xl" />
+
+            <Navbar />
+
+            <section className="container relative z-10 mx-auto flex flex-1 items-center justify-center px-6 py-12">
+
+                <HomepageCard />
+
+            </section>
+
+            <Footer />
+
         </main>
     );
 }
