@@ -9,6 +9,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
+import {
+    inputClassName,
+    luxuryCardClassName,
+    primaryButtonClassName,
+    sectionDescriptionClassName,
+    sectionTitleClassName,
+} from "@/lib/styles";
+
 export default function LoginForm() {
     const router = useRouter();
 
@@ -20,9 +28,7 @@ export default function LoginForm() {
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        if (loading) {
-            return;
-        }
+        if (loading) return;
 
         setLoading(true);
 
@@ -55,22 +61,25 @@ export default function LoginForm() {
     }
 
     return (
-        <Card className="w-full max-w-[430px] rounded-3xl border border-yellow-700/30 bg-black/70 p-10 shadow-2xl backdrop-blur-xl">
+        <Card className={`${luxuryCardClassName} max-w-[430px] p-10`}>
             <div className="space-y-3 text-center">
-                <h1 className="text-4xl font-serif tracking-wide text-yellow-500">
+                <h1 className={`${sectionTitleClassName} text-4xl`}>
                     Luxury Cart
                 </h1>
 
-                <p className="text-sm text-zinc-400">
+                <p className={sectionDescriptionClassName}>
                     Reserved for the Exceptional
                 </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="mt-10 space-y-6">
+            <form
+                onSubmit={handleSubmit}
+                className="mt-10 space-y-6"
+            >
                 <div className="space-y-2">
                     <label
                         htmlFor="email"
-                        className="text-sm font-medium text-zinc-300"
+                        className="text-sm font-medium text-foreground"
                     >
                         Email Address
                     </label>
@@ -84,14 +93,14 @@ export default function LoginForm() {
                         placeholder="Enter your email"
                         onChange={(e) => setEmail(e.target.value)}
                         disabled={loading}
-                        className="h-12 rounded-xl border border-yellow-700/40 bg-zinc-950 text-white placeholder:text-zinc-500 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/30"
+                        className={inputClassName}
                     />
                 </div>
 
                 <div className="space-y-2">
                     <label
                         htmlFor="password"
-                        className="text-sm font-medium text-zinc-300"
+                        className="text-sm font-medium text-foreground"
                     >
                         Password
                     </label>
@@ -104,17 +113,23 @@ export default function LoginForm() {
                             required
                             value={password}
                             placeholder="Enter your password"
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={(e) =>
+                                setPassword(e.target.value)
+                            }
                             disabled={loading}
-                            className="h-12 rounded-xl border border-yellow-700/40 bg-zinc-950 pr-12 text-white placeholder:text-zinc-500 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/30"
+                            className={`${inputClassName} pr-12`}
                         />
 
                         <button
                             type="button"
-                            onClick={() => setShowPassword((prev) => !prev)}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 transition-colors hover:text-yellow-500"
+                            onClick={() =>
+                                setShowPassword((prev) => !prev)
+                            }
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-brand-gold"
                             aria-label={
-                                showPassword ? "Hide password" : "Show password"
+                                showPassword
+                                    ? "Hide password"
+                                    : "Show password"
                             }
                         >
                             {showPassword ? (
@@ -129,7 +144,7 @@ export default function LoginForm() {
                 <Button
                     type="submit"
                     disabled={loading}
-                    className="h-12 w-full rounded-xl bg-yellow-600 font-semibold text-black transition-all duration-300 hover:bg-yellow-500 disabled:cursor-not-allowed disabled:opacity-70"
+                    className={primaryButtonClassName}
                 >
                     {loading ? (
                         <>

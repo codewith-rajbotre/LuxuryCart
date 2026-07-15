@@ -1,18 +1,16 @@
 "use client";
 
-
-
 import { Footer } from "../layout/layout/footer";
 import { Navbar } from "../navbar";
 import { HomepageCard } from "./homepage-card";
 
 export function HomePage() {
     return (
-        <main className="relative flex min-h-screen flex-col overflow-hidden bg-[#050505]">
+        <main className="relative flex min-h-screen flex-col overflow-hidden bg-background">
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.15),transparent_45%)]" />
 
-            <div className="absolute left-1/2 top-40 h-125 w-125 -translate-x-1/2 rounded-full bg-yellow-700/10 blur-3xl" />
+            <div className="absolute left-1/2 top-40 h-125 w-125 -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl" />
 
             <Navbar />
 
