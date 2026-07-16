@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { MobileNavbar } from "./mobile-navbar";
 import { NavbarLinks } from "./navbar-links";
 import { NavbarLogo } from "./navbar-logo";
+import { ThemeSelector } from "../common/theme-toggle";
 
 export function Navbar() {
     return (
@@ -24,12 +25,7 @@ export function Navbar() {
 
                 <div className="flex items-center gap-3">
 
-                    <Button
-                        variant="outline"
-                        className="hidden md:inline-flex"
-                    >
-                        Login
-                    </Button>
+                    <ThemeSelector />
 
                     <MobileNavbar />
 

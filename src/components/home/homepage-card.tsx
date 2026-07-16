@@ -27,15 +27,15 @@ export function HomepageCard() {
     }
 
     return (
-        <Card className="w-full max-w-2xl rounded-3xl border border-yellow-700/30 bg-black/70 shadow-2xl backdrop-blur-xl">
+        <Card className="w-full max-w-2xl rounded-3xl border border-border bg-card/90 text-card-foreground shadow-2xl backdrop-blur-xl">
 
             <CardHeader className="space-y-3 text-center">
 
-                <CardTitle className="font-serif text-5xl tracking-wide text-yellow-500">
+                <CardTitle className="font-serif text-5xl tracking-wide text-brand-gold">
                     Luxury Cart
                 </CardTitle>
 
-                <CardDescription className="text-base text-zinc-400">
+                <CardDescription className="text-base text-muted-foreground">
                     Welcome to the Luxury Cart Admin Dashboard
                 </CardDescription>
 
@@ -45,39 +45,45 @@ export function HomepageCard() {
 
                 <div className="grid grid-cols-3 gap-4">
 
-                    <Card className="border-yellow-700/20 bg-zinc-950/60">
+                    <Card className="border-border bg-muted/40 shadow-sm">
                         <CardContent className="p-6 text-center">
-                            <p className="text-3xl font-bold text-yellow-500">
+
+                            <p className="text-3xl font-bold text-brand-gold">
                                 0
                             </p>
 
-                            <p className="mt-2 text-sm text-zinc-400">
+                            <p className="mt-2 text-sm text-muted-foreground">
                                 Products
                             </p>
+
                         </CardContent>
                     </Card>
 
-                    <Card className="border-yellow-700/20 bg-zinc-950/60">
+                    <Card className="border-border bg-muted/40 shadow-sm">
                         <CardContent className="p-6 text-center">
-                            <p className="text-3xl font-bold text-yellow-500">
+
+                            <p className="text-3xl font-bold text-brand-gold">
                                 0
                             </p>
 
-                            <p className="mt-2 text-sm text-zinc-400">
+                            <p className="mt-2 text-sm text-muted-foreground">
                                 Orders
                             </p>
+
                         </CardContent>
                     </Card>
 
-                    <Card className="border-yellow-700/20 bg-zinc-950/60">
+                    <Card className="border-border bg-muted/40 shadow-sm">
                         <CardContent className="p-6 text-center">
-                            <p className="text-3xl font-bold text-yellow-500">
+
+                            <p className="text-3xl font-bold text-brand-gold">
                                 1
                             </p>
 
-                            <p className="mt-2 text-sm text-zinc-400">
+                            <p className="mt-2 text-sm text-muted-foreground">
                                 Administrator
                             </p>
+
                         </CardContent>
                     </Card>
 
@@ -85,19 +91,7 @@ export function HomepageCard() {
 
                 <Button
                     onClick={logout}
-                    className="
-                        h-12
-                        w-full
-                        rounded-xl
-                        bg-yellow-600
-                        font-semibold
-                        text-black
-                        transition-all
-                        duration-300
-                        hover:bg-yellow-500
-                        hover:shadow-lg
-                        hover:shadow-yellow-600/20
-                    "
+                    className="h-12 w-full rounded-xl bg-brand-gold font-semibold text-black transition-colors hover:opacity-90"
                 >
                     Logout
                 </Button>
