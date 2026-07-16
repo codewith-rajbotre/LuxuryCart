@@ -3,10 +3,8 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/layout/layout/footer";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,13 +12,13 @@ const inter = Inter({
 });
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +28,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
@@ -40,20 +38,14 @@ export default function RootLayout({
       className={cn(
         "h-full",
         "antialiased",
+        inter.variable,
         geistSans.variable,
         geistMono.variable,
         "font-sans",
-        inter.variable,
       )}
     >
-      <body className="min-h-screen bg-[#050505] text-white">
-        <ThemeProvider>
-          <Navbar />
-
-          <main className="flex-1">{children}</main>
-
-          <Footer />
-        </ThemeProvider>
+      <body className="min-h-screen bg-background text-foreground">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

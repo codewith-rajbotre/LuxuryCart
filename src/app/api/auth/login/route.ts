@@ -1,38 +1,71 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
+
 import { fetchAdminByEmail } from "@/db/supabase/login";
 import { createSession } from "@/lib/auth/session";
 
-export async function POST(req: Request) {
-    const { email, password } = await req.json();
+export async function POST(request: Request) {
+    try {
+        const { email, password } = await request.json();
 
-    const admin = await fetchAdminByEmail(email);
+        if (!email || !password) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "Email and password are required.",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
 
-    if (!admin) {
+        const admin = await fetchAdminByEmail(email);
+
+        if (!admin) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "Invalid credentials.",
+                },
+                {
+                    status: 401,
+                }
+            );
+        }
+
+        const passwordMatches = await bcrypt.compare(
+            password,
+            admin.password
+        );
+
+        if (!passwordMatches) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "Invalid credentials.",
+                },
+                {
+                    status: 401,
+                }
+            );
+        }
+
+        await createSession(admin.id);
+
+        return NextResponse.json({
+            success: true,
+            redirectTo: "/home",
+        });
+    } catch {
         return NextResponse.json(
             {
                 success: false,
-                message: "Invalid credentials",
+                message: "Something went wrong.",
             },
-            { status: 401 }
-        );
-    }
-
-    const valid = await bcrypt.compare(password, admin.password);
-
-    if (!valid) {
-        return NextResponse.json(
             {
-                success: false,
-                message: "Invalid credentials",
-            },
-            { status: 401 }
+                status: 500,
+            }
         );
     }
-
-    await createSession(admin.id);
-
-    return NextResponse.json({
-        success: true,
-    });
 }

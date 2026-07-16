@@ -1,14 +1,5 @@
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export default async function Page() {
-  const cookieStore = await cookies();
-
-  const session = cookieStore.get("luxury_session");
-
-  if (session) {
+export default function Page() {
     redirect("/home");
-  }
-
-  redirect("/login");
 }
