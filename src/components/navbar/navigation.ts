@@ -4,8 +4,8 @@ export const navigationLinks = [
         href: "/",
     },
     {
-        title: "Products",
-        href: "/products",
+        title: "Brands",
+        href: "/brands",
     },
     {
         title: "About",
