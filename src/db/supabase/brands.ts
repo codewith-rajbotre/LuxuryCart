@@ -10,6 +10,7 @@ import { supabase } from "@/lib/supabase";
 
 
 export async function fetchAllBrands() {
+    try {
         const { data, error } = await supabase
             .from("brands")
             .select("*")
@@ -23,12 +24,17 @@ export async function fetchAllBrands() {
         if (error) {
             throw error;
         }
+         const parsedData = BrandsSchema.parse(data ?? []);
+         if(!parsedData){
+            console.log("parsed data error : ", error);
 
-        return BrandsSchema.parse(data ?? []);
+         }
+        return parsedData;
+    } catch (error) {
         console.error("Failed to fetch brands:", error);
-        
-        throw new Error("Unable to fetch brands.");
-    
+        return [];
+
+    }
 }
 
 // export async function fetchBrandById(id: string) {

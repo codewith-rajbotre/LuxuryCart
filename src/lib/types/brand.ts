@@ -5,35 +5,32 @@ export const BrandStatus = {
 
 export type BrandStatus =
     (typeof BrandStatus)[keyof typeof BrandStatus];
-
 export interface Brand {
     id: string;
-
     name: string;
-
     slug: string;
 
-    description: string | null;
+    description?: string | null;
 
-    logoUrl: string | null;
+    logoUrl?: string | null;
 
-    bannerUrl: string | null;
+    bannerUrl?: string | null;
 
-    websiteUrl: string | null;
+    websiteUrl?: string | null;
 
-    country: string | null;
+    country?: string | null;
 
-    foundedYear: number | null;
+    foundedYear?: number | null;
 
-    status: BrandStatus;
+    status?: BrandStatus;
 
-    isFeatured: boolean;
+    isFeatured?: boolean;
 
-    displayOrder: number;
+    displayOrder?: number;
 
-    createdBy: string | null;
+    createdBy?: string | null;
 
-    createdAt: string;
+    createdAt?: string;
 
-    updatedAt: string;
+    updatedAt?: string;
 }
