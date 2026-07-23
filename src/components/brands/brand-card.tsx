@@ -75,10 +75,8 @@ export default function BrandCard({ brand }: BrandCardProps) {
           </div>
 
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button variant="ghost" size="icon">
-                <MoreVertical className="h-4 w-4" />
-              </Button>
+            <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent focus:outline-none">
+              <MoreVertical className="h-4 w-4" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
