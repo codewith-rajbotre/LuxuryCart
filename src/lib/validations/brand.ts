@@ -74,17 +74,19 @@ export const BrandSchema = z.object({
         .nullable()
         .optional(),
 
-    createdAt: z
-        .string()
-        .datetime()
-        .optional(),
+    createdAt: z.string().optional(),
 
-    updatedAt: z
-        .string()
-        .datetime()
-        .optional(),
+    updatedAt: z.string().optional(),
 });
 
 export const BrandsSchema = z.array(BrandSchema);
 
 export type Brand = z.infer<typeof BrandSchema>;
+
+export const CreateBrandSchema = BrandSchema.omit({
+    id: true,
+    createdAt: true,
+    updatedAt: true,
+});
+
+export type CreateBrand = z.infer<typeof CreateBrandSchema>;

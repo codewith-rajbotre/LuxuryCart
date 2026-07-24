@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { createBrandAction } from "@/actions/brand-actions";
+import { BrandStatus } from "@/lib/types/brand";
 
 interface CreateBrandDialogProps {
   open: boolean;
@@ -35,11 +37,40 @@ export default function CreateBrandDialog({
   const [description, setDescription] = useState("");
 
   async function handleSubmit() {
+    if (!name.trim()) {
+      alert("Brand name is required.");
+      return;
+    }
+
     setLoading(true);
 
     try {
-      // Next Step:
-      // await createBrandAction(...)
+      await createBrandAction({
+        name: name.trim(),
+        slug: slug.trim(),
+        description: description || null,
+        logoUrl: null,
+        bannerUrl: null,
+        websiteUrl: website || null,
+        country: country || null,
+        foundedYear: foundedYear ? Number(foundedYear) : null,
+        status: BrandStatus.PUBLISHED,
+        isFeatured: false,
+        displayOrder: 0,
+        createdBy: null,
+      });
+
+      setName("");
+      setSlug("");
+      setWebsite("");
+      setCountry("");
+      setFoundedYear("");
+      setDescription("");
+
+      onOpenChange(false);
+    } catch (error) {
+      console.error(error);
+      alert("Unable to create brand.");
     } finally {
       setLoading(false);
     }
