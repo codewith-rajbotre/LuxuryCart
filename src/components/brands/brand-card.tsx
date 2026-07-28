@@ -1,12 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import {
   Globe,
   Pencil,
   Star,
   Trash2,
-  Eye,
   Building2,
   MoreVertical,
 } from "lucide-react";
@@ -28,8 +30,13 @@ interface BrandCardProps {
 }
 
 export default function BrandCard({ brand }: BrandCardProps) {
+  const router = useRouter();
+
   return (
-    <Card className="overflow-hidden border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <Card
+      onClick={() => router.push(`/brands/${brand.slug}`)}
+      className="cursor-pointer overflow-hidden border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
       {/* Banner */}
 
       <div className="relative h-40 w-full bg-muted">
@@ -75,22 +82,31 @@ export default function BrandCard({ brand }: BrandCardProps) {
           </div>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent focus:outline-none">
+            <DropdownMenuTrigger
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent focus:outline-none"
+            >
               <MoreVertical className="h-4 w-4" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>
-                <Eye className="mr-2 h-4 w-4" />
-                View
-              </DropdownMenuItem>
-
-              <DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={(e) => {
+                  e.stopPropagation();
+                  // TODO: Edit Brand
+                }}
+              >
                 <Pencil className="mr-2 h-4 w-4" />
                 Edit
               </DropdownMenuItem>
 
-              <DropdownMenuItem className="text-destructive">
+              <DropdownMenuItem
+                className="text-destructive"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  // TODO: Delete Brand
+                }}
+              >
                 <Trash2 className="mr-2 h-4 w-4" />
                 Delete
               </DropdownMenuItem>
@@ -133,6 +149,7 @@ export default function BrandCard({ brand }: BrandCardProps) {
               <Link
                 href={brand.websiteUrl}
                 target="_blank"
+                onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-1 text-brand-gold hover:underline"
               >
                 <Globe className="h-4 w-4" />
@@ -145,18 +162,25 @@ export default function BrandCard({ brand }: BrandCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="grid grid-cols-3 gap-3">
-        <Button variant="outline">
-          <Eye className="mr-2 h-4 w-4" />
-          View
-        </Button>
-
-        <Button variant="outline">
+      <CardFooter className="grid grid-cols-2 gap-3">
+        <Button
+          variant="outline"
+          onClick={(e) => {
+            e.stopPropagation();
+            // TODO: Edit Brand
+          }}
+        >
           <Pencil className="mr-2 h-4 w-4" />
           Edit
         </Button>
 
-        <Button variant="destructive">
+        <Button
+          variant="destructive"
+          onClick={(e) => {
+            e.stopPropagation();
+            // TODO: Delete Brand
+          }}
+        >
           <Trash2 className="mr-2 h-4 w-4" />
           Delete
         </Button>
