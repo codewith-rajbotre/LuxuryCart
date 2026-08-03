@@ -2,12 +2,6 @@ import Link from "next/link";
 
 import { Crown, Gem, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -56,8 +50,6 @@ export default function AboutContentSection() {
           </p>
         </div>
 
-        {/* Cards */}
-
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {brandHighlights.map((feature) => {
             const FeatureIcon = feature.icon;
@@ -85,8 +77,6 @@ export default function AboutContentSection() {
           })}
         </div>
 
-        {/* Highlight */}
-
         <Card className="border-border bg-card">
           <CardContent className="px-8 py-12 text-center">
             <h3 className="text-3xl font-bold text-foreground">
@@ -100,50 +90,6 @@ export default function AboutContentSection() {
             </p>
           </CardContent>
         </Card>
-{/* 
-        FAQ
-
-        <div className="mx-auto max-w-4xl">
-          <h3 className="mb-8 text-center text-3xl font-bold text-foreground">
-            Frequently Asked Questions
-          </h3>
-
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="brands">
-              <AccordionTrigger>
-                What makes Luxury Cart different?
-              </AccordionTrigger>
-
-              <AccordionContent>
-                Luxury Cart focuses on bringing together prestigious brands
-                across multiple categories within one refined experience.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="categories">
-              <AccordionTrigger>
-                Which categories are available?
-              </AccordionTrigger>
-
-              <AccordionContent>
-                Explore luxury watches, automobiles, fashion, jewelry, lifestyle
-                products, and many more premium collections.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="experience">
-              <AccordionTrigger>Why choose Luxury Cart?</AccordionTrigger>
-
-              <AccordionContent>
-                We prioritize quality, elegance, thoughtful presentation, and an
-                effortless browsing experience inspired by the world's finest
-                brands.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div> */}
-
-        {/* CTA */}
 
         <div className="text-center">
           <h3 className="text-3xl font-bold text-foreground">

@@ -76,33 +76,6 @@ export default function RolexGallery({ theme }: RolexGalleryProps) {
           engineering and the elegance that defines every Rolex creation.
         </p>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {galleryImages.map((image) => (
-            <div key={image.id} className="group overflow-hidden rounded-2xl">
-              <div className="relative h-105">
-                <Image
-                  src={image.image}
-                  alt={image.title}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-black/20 opacity-0 transition group-hover:opacity-100" />
-              </div>
-
-              <div className="py-5">
-                <h3
-                  className="text-xl font-medium"
-                  style={{
-                    color: theme.text_primary,
-                  }}
-                >
-                  {image.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

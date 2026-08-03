@@ -9,8 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function AboutHeaderSection() {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* Decorative Glow */}
-
       <div className="pointer-events-none absolute left-1/2 top-0 h-144 w-xl -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl" />
 
       <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-6 py-20">

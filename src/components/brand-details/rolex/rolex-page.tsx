@@ -1,6 +1,9 @@
-import { supabase } from "@/lib/supabase";
-import RolexHero from "./rolex-hero";
+"use client";
+
+import { useTheme } from "next-themes";
+
 import RolexHeader from "./rolex-header";
+import RolexHero from "./rolex-hero";
 import RolexStory from "./rolex-story";
 import RolexCollections from "./rolex-collections";
 import RolexCraftsmanship from "./rolex-craftsmanship";
@@ -9,30 +12,19 @@ import RolexGallery from "./rolex-gallery";
 import RolexContact from "./rolex-content";
 import RolexFooter from "./rolex-footer";
 
-export default async function RolexPage() {
-  const { data: brand, error } = await supabase
-    .from("brands")
-    .select(
-      `
-    *,
-    brand_themes(*)
-  `,
-    )
-    .eq("slug", "rolex")
-    .single();
+interface RolexPageProps {
+  brand: any;
+}
 
-  if (error || !brand) {
-    return (
-      <main className="flex min-h-screen items-center justify-center">
-        <h1 className="text-2xl font-semibold">Brand not found.</h1>
-      </main>
-    );
-  }
+export default function RolexPage({ brand }: RolexPageProps) {
+  const { resolvedTheme } = useTheme();
 
   const theme =
-    brand.brand_themes.find(
-      (item: { theme_name: string }) => item.theme_name === "light",
-    ) ?? brand.brand_themes[0];
+    brand.brand_themes.find((item: any) => item.theme_name === resolvedTheme) ??
+    brand.brand_themes[0];
+
+  console.log("Current Theme:", resolvedTheme);
+  console.log("Selected Theme:", theme);
 
   return (
     <main
@@ -43,13 +35,21 @@ export default async function RolexPage() {
       }}
     >
       <RolexHeader brand={brand} theme={theme} />
+
       <RolexHero brand={brand} theme={theme} />
+
       <RolexStory brand={brand} theme={theme} />
+
       <RolexCollections brand={brand} theme={theme} />
+
       <RolexCraftsmanship brand={brand} theme={theme} />
+
       <RolexHeritage brand={brand} theme={theme} />
-      {/* <RolexGallery brand={brand} theme={theme} /> */}
+
+      <RolexGallery brand={brand} theme={theme} />
+
       <RolexContact brand={brand} theme={theme} />
+
       <RolexFooter brand={brand} theme={theme} />
     </main>
   );

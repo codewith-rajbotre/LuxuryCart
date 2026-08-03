@@ -5,8 +5,6 @@ import {
     CreateBrand,
 } from "@/lib/validations/brand";
 import { supabase } from "@/lib/supabase";
-import { Brand } from "@/lib/types/brand";
-
 
 export async function fetchAllBrands() {
     try {
@@ -34,27 +32,6 @@ export async function fetchAllBrands() {
 
     }
 }
-
-// export async function fetchBrandById(id: string) {
-//     try {
-//         const { data, error } = await supabase
-//             .from("brands")
-//             .select("*")
-//             .eq("id", id)
-//             .single();
-
-//         if (error) {
-//             throw error;
-//         }
-
-//         return BrandSchema.parse(data);
-//     } catch (error) {
-//         console.error("Failed to fetch brand:", error);
-
-//         throw new Error("Unable to fetch brand.");
-//     }
-// }
-
 export async function createBrand(
   brand: CreateBrand
 ) {
@@ -114,52 +91,3 @@ export async function createBrand(
     throw new Error("Unable to create brand.");
   }
 }
-
-// export async function updateBrand(
-//     id: string,
-//     brand: Partial<
-//         Omit<
-//             Brand,
-//             "id" | "createdAt" | "updatedAt"
-//         >
-//     >,
-// ) {
-//     try {
-//         const { data, error } = await supabase
-//             .from("brands")
-//             .update({
-//                 ...brand,
-//                 updatedAt: new Date().toISOString(),
-//             })
-//             .eq("id", id)
-//             .select()
-//             .single();
-
-//         if (error) {
-//             throw error;
-//         }
-
-//         return BrandSchema.parse(data);
-//     } catch (error) {
-//         console.error("Failed to update brand:", error);
-
-//         throw new Error("Unable to update brand.");
-//     }
-// }
-
-// export async function deleteBrand(id: string) {
-//     try {
-//         const { error } = await supabase
-//             .from("brands")
-//             .delete()
-//             .eq("id", id);
-
-//         if (error) {
-//             throw error;
-//         }
-//     } catch (error) {
-//         console.error("Failed to delete brand:", error);
-
-//         throw new Error("Unable to delete brand.");
-//     }
-// }

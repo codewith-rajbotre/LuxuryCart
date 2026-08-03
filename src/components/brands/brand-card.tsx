@@ -35,65 +35,39 @@ export default function BrandCard({ brand }: BrandCardProps) {
   return (
     <Card
       onClick={() => router.push(`/brands/${brand.slug}`)}
-      className="cursor-pointer overflow-hidden border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:border-[#D4AF37] hover:shadow-2xl"
     >
-      {/* Banner */}
-
-      <div className="relative h-40 w-full bg-muted">
-        {brand.bannerUrl ? (
-          <Image
-            src={brand.bannerUrl}
-            alt={brand.name}
-            fill
-            className="object-cover"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center">
-            <Building2 className="h-12 w-12 text-muted-foreground" />
-          </div>
-        )}
-      </div>
-
-      <CardContent className="space-y-6">
-        {/* Header */}
-
+      <CardContent className="space-y-6 p-8">
         <div className="flex items-start justify-between">
-          <div className="flex items-center gap-4">
-            <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border bg-background">
-              {brand.logoUrl ? (
-                <Image
-                  src={brand.logoUrl}
-                  alt={brand.name}
-                  fill
-                  className="object-contain p-2"
-                />
-              ) : (
-                <Building2 className="h-7 w-7 text-muted-foreground" />
-              )}
-            </div>
+          <div>
+            <Badge
+              variant="outline"
+              className="border-[#D4AF37]/40 text-[#D4AF37]"
+            >
+              {brand.status}
+            </Badge>
 
-            <div>
-              <h3 className="text-lg font-semibold">{brand.name}</h3>
+            <h2 className="mt-6 text-3xl font-light tracking-wide transition-colors group-hover:text-[#D4AF37]">
+              {brand.name}
+            </h2>
 
-              <p className="text-sm text-muted-foreground">
-                {brand.country ?? "Unknown Country"}
-              </p>
-            </div>
+            <p className="mt-2 text-muted-foreground">
+              {brand.country ?? "Unknown Country"}
+            </p>
           </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent focus:outline-none"
+              className="rounded-lg p-2 hover:bg-accent"
             >
-              <MoreVertical className="h-4 w-4" />
+              <MoreVertical className="h-5 w-5" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
               <DropdownMenuItem
                 onClick={(e) => {
                   e.stopPropagation();
-                  // TODO: Edit Brand
                 }}
               >
                 <Pencil className="mr-2 h-4 w-4" />
@@ -104,7 +78,6 @@ export default function BrandCard({ brand }: BrandCardProps) {
                 className="text-destructive"
                 onClick={(e) => {
                   e.stopPropagation();
-                  // TODO: Delete Brand
                 }}
               >
                 <Trash2 className="mr-2 h-4 w-4" />
@@ -114,60 +87,55 @@ export default function BrandCard({ brand }: BrandCardProps) {
           </DropdownMenu>
         </div>
 
-        {/* Status */}
+        {brand.isFeatured && (
+          <Badge className="bg-[#D4AF37] text-black hover:bg-[#D4AF37]">
+            <Star className="mr-1 h-3 w-3 fill-current" />
+            Featured Brand
+          </Badge>
+        )}
 
-        <div className="flex flex-wrap gap-2">
-          <Badge>{brand.status}</Badge>
-
-          {brand.isFeatured && (
-            <Badge variant="secondary" className="gap-1">
-              <Star className="h-3 w-3 fill-current" />
-              Featured
-            </Badge>
-          )}
-        </div>
-
-        {/* Description */}
-
-        <p className="line-clamp-3 text-sm leading-6 text-muted-foreground">
+        <p className="line-clamp-4 leading-7 text-muted-foreground">
           {brand.description ?? "No description available."}
         </p>
 
-        {/* Details */}
+        <div className="grid grid-cols-2 gap-6 rounded-xl border border-border p-4">
+          <div>
+            <p className="text-xs uppercase tracking-widest text-muted-foreground">
+              Founded
+            </p>
 
-        <div className="space-y-3 text-sm">
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Founded</span>
-
-            <span>{brand.foundedYear ?? "-"}</span>
+            <p className="mt-2 text-lg font-semibold">
+              {brand.foundedYear ?? "-"}
+            </p>
           </div>
 
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Website</span>
+          <div>
+            <p className="text-xs uppercase tracking-widest text-muted-foreground">
+              Country
+            </p>
 
-            {brand.websiteUrl ? (
-              <Link
-                href={brand.websiteUrl}
-                target="_blank"
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-1 text-brand-gold hover:underline"
-              >
-                <Globe className="h-4 w-4" />
-                Visit
-              </Link>
-            ) : (
-              <span>-</span>
-            )}
+            <p className="mt-2 text-lg font-semibold">{brand.country ?? "-"}</p>
           </div>
         </div>
+
+        {brand.websiteUrl && (
+          <Link
+            href={brand.websiteUrl}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-2 text-[#D4AF37] transition hover:opacity-80"
+          >
+            <Globe className="h-4 w-4" />
+            Official Website
+          </Link>
+        )}
       </CardContent>
 
-      <CardFooter className="grid grid-cols-2 gap-3">
+      <CardFooter className="grid grid-cols-2 gap-4 border-t border-border p-6">
         <Button
           variant="outline"
           onClick={(e) => {
             e.stopPropagation();
-            // TODO: Edit Brand
           }}
         >
           <Pencil className="mr-2 h-4 w-4" />
@@ -178,7 +146,6 @@ export default function BrandCard({ brand }: BrandCardProps) {
           variant="destructive"
           onClick={(e) => {
             e.stopPropagation();
-            // TODO: Delete Brand
           }}
         >
           <Trash2 className="mr-2 h-4 w-4" />
