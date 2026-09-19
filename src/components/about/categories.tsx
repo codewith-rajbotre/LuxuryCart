@@ -151,7 +151,7 @@ export default function Categories() {
               </h3>
 
               <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-neutral-400">
-                Luxury Cart brings together legendary names across multiple
+               AUREQUIS PARIJAT brings together legendary names across multiple
                 categories, allowing every collection to reflect the prestige,
                 heritage, and excellence associated with the world's most
                 admired brands.

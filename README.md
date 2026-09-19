@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AUREQUIS PARIJAT
 
-## Getting Started
+## Brand Meaning
 
-First, run the development server:
+**AUREQUIS PARIJAT** is a luxury brand name that combines an international, refined identity with timeless Indian heritage.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### AUREQUIS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**AUREQUIS** is a coined luxury name inspired by the Latin association of **"Aure" / "Aurum"**, meaning **gold**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It represents:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Golden excellence
+- Prestige
+- Distinction
+- Rarity
+- Elegance
+- Exclusivity
 
-## Learn More
+The name is designed to create a sophisticated and international luxury identity.
 
-To learn more about Next.js, take a look at the following resources:
+> **AUREQUIS — Golden Distinction**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### PARIJAT
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**PARIJAT (पारिजात)** is derived from Sanskrit and refers to the **Parijata tree/flower**, traditionally associated with beauty, fragrance, purity and divine heritage.
 
-## Deploy on Vercel
+It represents:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Divine beauty
+- Timeless elegance
+- Purity
+- Rarity
+- Indian heritage
+- Celestial character
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> **PARIJAT — Timeless Beauty and Divine Heritage**
+
+---
+
+## Combined Meaning
+
+Together, **AUREQUIS PARIJAT** represents the meeting of **golden luxury and timeless heritage**.
+
+> **AUREQUIS PARIJAT**  
+> *Where Golden Luxury Meets Timeless Heritage.*
+
+The name combines the sophisticated, international character of **AUREQUIS** with the cultural and Sanskrit heritage of **PARIJAT**, creating a distinctive identity for a modern luxury brand.
+
+---
+
+## Brand Philosophy
+
+AUREQUIS PARIJAT is built around the idea that true luxury is not defined merely by price or appearance, but by:
+
+- Heritage
+- Craftsmanship
+- Rarity
+- Authenticity
+- Timeless design
+- Attention to detail
+- Exceptional experiences
+
+The brand aims to represent luxury that remains meaningful across generations.
+
+---
+
+## Brand Positioning
+
+**AUREQUIS PARIJAT** is positioned as a premium and sophisticated luxury identity that bridges:
+
+**Global Luxury × Indian Heritage**
+
+The brand name is intended to feel:
+
+- Sophisticated
+- Premium
+- Elegant
+- Timeless
+- Exclusive
+- Culturally distinctive
+
+---
+
+## Brand Essence
+
+> **Golden Excellence. Timeless Heritage.**
+
+### Alternative Brand Taglines
+
+- **Where Golden Luxury Meets Timeless Heritage.**
+- **Crafted for Generations.**
+- **Elegance Beyond Time.**
+- **A Legacy of Distinction.**
+- **The Art of Timeless Luxury.**
+- **Born from Heritage. Defined by Excellence.**
+
+---
+
+## Name Interpretation
+
+| Name | Interpretation |
+|------|----------------|
+| **AUREQUIS** | Golden distinction, prestige and excellence |
+| **PARIJAT** | Divine beauty, purity and timeless heritage |
+| **AUREQUIS PARIJAT** | Golden luxury combined with timeless heritage |
+
+---
+
+## Brand Identity
+
+**AUREQUIS PARIJAT** represents a luxury philosophy where modern sophistication meets ancient heritage.
+
+The identity is designed to communicate **exclusivity without excess, elegance without compromise, and heritage with a contemporary perspective.**

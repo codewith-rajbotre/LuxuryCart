@@ -16,7 +16,7 @@ export function FooterCTA() {
         <CardContent className="relative flex flex-col items-center gap-8 px-8 py-20 text-center">
           <div className="space-y-4">
             <span className="text-xs uppercase tracking-[0.35em] text-brand-gold">
-              Luxury Cart
+              AUREQUIS PARIJAT
             </span>
 
             <h2 className="font-serif text-4xl leading-tight md:text-5xl">

@@ -31,7 +31,7 @@ export default function BrandHeader({ totalBrands }: BrandHeaderProps) {
           </div>
 
           <p className="max-w-2xl text-muted-foreground">
-            Manage the world's finest luxury brands showcased on Luxury Cart.
+            Manage the world's finest luxury brands showcased on AUREQUIS PARIJAT.
             Add, update, and organize premium brand collections from one place.
           </p>
         </div>

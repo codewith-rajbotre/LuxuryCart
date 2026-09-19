@@ -61,10 +61,10 @@ export default function LoginForm() {
     }
 
     return (
-        <Card className={`${luxuryCardClassName} max-w-[430px] p-10`}>
+        <Card className={`${luxuryCardClassName} max-w-107.5 p-10`}>
             <div className="space-y-3 text-center">
                 <h1 className={`${sectionTitleClassName} text-4xl`}>
-                    Luxury Cart
+                    AUREQUIS PARIJAT
                 </h1>
 
                 <p className={sectionDescriptionClassName}>

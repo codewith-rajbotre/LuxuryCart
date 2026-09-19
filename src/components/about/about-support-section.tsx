@@ -76,7 +76,7 @@ export default function AboutSupportSection() {
           <CardContent className="flex flex-col items-center justify-between gap-8 px-8 py-12 text-center lg:flex-row lg:text-left">
             <div>
               <h3 className="text-3xl font-bold text-foreground">
-                Continue Exploring Luxury Cart
+                Continue Exploring AUREQUIS PARIJAT
               </h3>
 
               <p className="mt-3 max-w-2xl text-muted-foreground">

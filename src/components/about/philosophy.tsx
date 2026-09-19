@@ -23,7 +23,7 @@ export default function Philosophy() {
           </h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-400">
-            Luxury Cart is built around a single philosophy— celebrating the
+            AUREQUIS PARIJAT is built around a single philosophy— celebrating the
             world's most prestigious brands through a refined digital experience
             that reflects their craftsmanship, heritage, and timeless
             excellence.
@@ -45,7 +45,7 @@ export default function Philosophy() {
 
             <CardContent>
               <p className="leading-8 text-neutral-400">
-                Every brand within Luxury Cart represents decades—sometimes
+                Every brand within AUREQUIS PARIJAT represents decades—sometimes
                 centuries—of craftsmanship, innovation, and excellence. Their
                 stories are built upon heritage, precision, and the pursuit of
                 perfection.
@@ -109,7 +109,7 @@ export default function Philosophy() {
               <p className="leading-8 text-neutral-400">
                 Luxury is not defined by trends—it is defined by enduring
                 quality, remarkable craftsmanship, and brands whose influence
-                continues across generations. Luxury Cart celebrates that
+                continues across generations. AUREQUIS PARIJAT celebrates that
                 timeless excellence.
               </p>
             </CardContent>

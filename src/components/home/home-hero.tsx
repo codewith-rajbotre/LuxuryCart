@@ -14,7 +14,7 @@ export function HomeHero() {
         <div className="space-y-8">
           <div className="inline-flex rounded-full border border-brand-gold/20 bg-brand-gold/10 px-4 py-2">
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-brand-gold">
-              Luxury Cart
+              AUREQUIS PARIJAT
             </span>
           </div>
 

@@ -65,7 +65,7 @@ export default function Experience() {
           </h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-400">
-            Luxury Cart is designed to make discovering prestigious brands as
+            AUREQUIS PARIJAT is designed to make discovering prestigious brands as
             refined as the brands themselves. Every step has been thoughtfully
             crafted to create an elegant, immersive, and memorable experience.
           </p>
@@ -127,7 +127,7 @@ export default function Experience() {
               </h3>
 
               <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-neutral-400">
-                Every interaction within Luxury Cart is designed to celebrate
+                Every interaction within AUREQUIS PARIJAT is designed to celebrate
                 the artistry, innovation, and timeless heritage of the world's
                 most iconic brands—creating an experience that feels as
                 exceptional as the collections themselves.

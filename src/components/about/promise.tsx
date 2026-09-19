@@ -44,7 +44,7 @@ const promises = [
     title: "Continuous Refinement",
     icon: Award,
     description:
-      "Luxury Cart continues to evolve with thoughtful improvements while remaining true to the values of quality, elegance, and craftsmanship.",
+      "AUREQUIS PARIJAT continues to evolve with thoughtful improvements while remaining true to the values of quality, elegance, and craftsmanship.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Promise() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#D4AF37]">
-            The Luxury Cart Promise
+            The AUREQUIS PARIJAT Promise
           </p>
 
           <h2 className="mt-6 text-4xl font-bold leading-tight text-white md:text-6xl">
@@ -117,7 +117,7 @@ export default function Promise() {
               </h3>
 
               <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-neutral-400">
-                Luxury Cart is more than a collection of premium products. It is
+                AUREQUIS PARIJAT is more than a collection of premium products. It is
                 a celebration of craftsmanship, heritage, innovation, and
                 timeless elegance. Every brand, every collection, and every
                 experience is thoughtfully presented to honor the excellence

@@ -30,11 +30,11 @@ export function HomepageCard() {
     <Card className="w-full max-w-2xl rounded-3xl border border-border bg-card/90 text-card-foreground shadow-2xl backdrop-blur-xl">
       <CardHeader className="space-y-3 text-center">
         <CardTitle className="font-serif text-5xl tracking-wide text-brand-gold">
-          Luxury Cart
+          AUREQUIS PARIJAT
         </CardTitle>
 
         <CardDescription className="text-base text-muted-foreground">
-          Welcome to the Luxury Cart Admin Dashboard
+          Welcome to the AUREQUIS PARIJAT Admin Dashboard
         </CardDescription>
       </CardHeader>
 

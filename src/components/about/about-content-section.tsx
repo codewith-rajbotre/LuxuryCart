@@ -44,7 +44,7 @@ export default function AboutContentSection() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Luxury Cart is built to showcase exceptional brands through a
+            AUREQUIS PARIJAT is built to showcase exceptional brands through a
             refined experience that values heritage, craftsmanship, and timeless
             design.
           </p>
@@ -84,7 +84,7 @@ export default function AboutContentSection() {
             </h3>
 
             <p className="mx-auto mt-6 max-w-3xl leading-8 text-muted-foreground">
-              Luxury Cart is a destination where remarkable brands, exceptional
+             AUREQUIS PARIJAT is a destination where remarkable brands, exceptional
               craftsmanship, and premium experiences come together in one
               elegant platform.
             </p>

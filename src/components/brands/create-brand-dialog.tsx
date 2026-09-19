@@ -83,7 +83,7 @@ export default function CreateBrandDialog({
           <DialogTitle>Create Brand</DialogTitle>
 
           <DialogDescription>
-            Add a premium brand to the Luxury Cart collection.
+            Add a premium brand to the AUREQUIS PARIJAT collection.
           </DialogDescription>
         </DialogHeader>
 

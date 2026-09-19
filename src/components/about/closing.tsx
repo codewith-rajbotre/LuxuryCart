@@ -26,7 +26,7 @@ export default function Closing() {
               variant="outline"
               className="mt-10 border-[#D4AF37]/30 bg-[#111111] px-5 py-2 uppercase tracking-[0.4em] text-[#D4AF37]"
             >
-              Luxury Cart
+             AUREQUIS PARIJAT
             </Badge>
 
             <h2 className="mt-8 text-4xl font-bold leading-tight text-white md:text-6xl">
@@ -37,7 +37,7 @@ export default function Closing() {
             </h2>
 
             <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-neutral-300">
-              Luxury Cart is dedicated to bringing together the world's most
+             AUREQUIS PARIJAT is dedicated to bringing together the world's most
               prestigious brands within one refined destination. Every
               collection reflects heritage, craftsmanship, innovation, and
               timeless excellence, creating an experience worthy of the names it
@@ -47,7 +47,7 @@ export default function Closing() {
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-400">
               Whether your passion lies in iconic Swiss watches, extraordinary
               automobiles, distinguished fashion, elegant jewelry, premium
-              lifestyle collections, or timeless design, Luxury Cart welcomes
+              lifestyle collections, or timeless design, AUREQUIS PARIJAT welcomes
               you to explore a world where excellence is always at the center.
             </p>
 
