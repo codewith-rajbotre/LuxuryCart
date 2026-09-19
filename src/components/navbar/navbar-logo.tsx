@@ -3,7 +3,7 @@ export function NavbarLogo() {
         <div className="space-y-1">
 
             <h1 className="text-xl font-semibold tracking-[0.35em] uppercase">
-                Luxury Cart
+                AUREQUIS PARIJAT
             </h1>
 
             <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase">

@@ -57,8 +57,8 @@ export default function Craftsmanship() {
                 Luxury is never created overnight. It is shaped through decades
                 of dedication, relentless innovation, skilled craftsmanship, and
                 an unwavering commitment to excellence. Every brand featured
-                within Luxury Cart carries a legacy that continues to inspire
-                generations around the world.
+                within AUREQUIS PARIJAT carries a legacy that continues to
+                inspire generations around the world.
               </p>
             </div>
 
@@ -106,10 +106,10 @@ export default function Craftsmanship() {
               </p>
 
               <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-400">
-                Luxury Cart exists to bring together those remarkable stories,
-                allowing every collection to reflect the excellence, artistry,
-                and timeless values that define the world's most respected
-                brands.
+                AUREQUIS PARIJAT exists to bring together those remarkable
+                stories, allowing every collection to reflect the excellence,
+                artistry, and timeless values that define the world's most
+                respected brands.
               </p>
             </div>
           </CardContent>

@@ -26,7 +26,7 @@ export function MobileNavbar() {
 
             <SheetContent side="right" className="w-80">
                 <SheetHeader>
-                    <SheetTitle>Luxury Cart</SheetTitle>
+                    <SheetTitle>AUREQUIS PARIJAT</SheetTitle>
                 </SheetHeader>
 
                 <nav className="mt-8 flex flex-col gap-2">

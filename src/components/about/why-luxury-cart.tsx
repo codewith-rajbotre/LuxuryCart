@@ -44,7 +44,7 @@ const features = [
     title: "Our Promise",
     icon: ShieldCheck,
     description:
-      "Luxury Cart is committed to providing a premium environment where heritage, excellence, and quality remain at the heart of every collection.",
+      "AUREQUIS PARIJAT is committed to providing a premium environment where heritage, excellence, and quality remain at the heart of every collection.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function WhyLuxuryCart() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#D4AF37]">
-            Why Luxury Cart
+            Why AUREQUIS PARIJAT
           </p>
 
           <h2 className="mt-6 text-4xl font-bold text-white md:text-6xl">
@@ -67,7 +67,7 @@ export default function WhyLuxuryCart() {
           </h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-400">
-            Every element of Luxury Cart is inspired by the values that define
+            Every element of AUREQUIS PARIJAT is inspired by the values that define
             the world's most respected brands— craftsmanship, authenticity,
             innovation, elegance, and timeless quality.
           </p>
@@ -116,7 +116,7 @@ export default function WhyLuxuryCart() {
               </h4>
 
               <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-neutral-400">
-                Luxury Cart is a destination where globally respected brands are
+                AUREQUIS PARIJAT is a destination where globally respected brands are
                 presented with the elegance they deserve. Every category, every
                 collection, and every interaction reflects a commitment to
                 timeless quality, refined craftsmanship, and an exceptional

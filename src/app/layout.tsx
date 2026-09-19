@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Luxury Cart",
-  description: "Luxury Cart",
+  title: "AUREQUIS PARIJAT",
+  description: "AUREQUIS PARIJAT",
 };
 
 export default function RootLayout({

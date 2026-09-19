@@ -18,7 +18,7 @@ export default function AboutHeaderSection() {
               variant="outline"
               className="border-border bg-muted px-4 py-1 text-xs font-medium uppercase tracking-[0.3em] text-brand-gold"
             >
-              About Luxury Cart
+              About AUREQUIS PARIJAT
             </Badge>
 
             <h1 className="mt-8 text-5xl font-bold tracking-tight text-foreground md:text-7xl">
@@ -29,7 +29,7 @@ export default function AboutHeaderSection() {
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">
-              Luxury Cart brings together the world's most prestigious brands
+              AUREQUIS PARIJAT brings together the world's most prestigious brands
               into one refined destination, making discovery effortless while
               celebrating craftsmanship, heritage, and timeless excellence.
             </p>

@@ -24,7 +24,7 @@ export default function Hero() {
               variant="outline"
               className="border-[#D4AF37]/40 bg-[#111111] px-5 py-2 text-xs uppercase tracking-[0.35em] text-[#D4AF37]"
             >
-              About Luxury Cart
+              About AUREQUIS PARIJAT
             </Badge>
 
             <h1 className="mt-8 text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl">
@@ -35,7 +35,7 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto mt-10 max-w-4xl text-lg leading-8 text-neutral-300 md:text-xl">
-              Luxury Cart is a carefully curated destination where the world's
+              AUREQUIS PARIJAT is a carefully curated destination where the world's
               most prestigious brands come together under one refined
               experience. Every collection is presented with elegance,
               authenticity, and timeless sophistication.
