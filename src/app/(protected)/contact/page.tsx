@@ -1,11 +1,11 @@
+
+import ContactPage from "@/components/contacts/contact-page";
 import { Card } from "@/components/ui/card";
 
 export default async function ContactsPage() {
   return (
-    <>
-      <Card>
-        <div>Feature Coming soon</div>
-      </Card>
-    </>
+    <Card className="min-h-[calc(100vh-8rem)] overflow-hidden border-border bg-background p-0">
+      <ContactPage />
+    </Card>
   );
 }
